@@ -36,7 +36,7 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         // エネミータイプ２だけ縦移動（サインカーブ）追加
-        if(enemyType == 2)
+        if (enemyType == 2)
         {
             dir.y = Mathf.Sin(rad + Time.time * 5f);
         }

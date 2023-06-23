@@ -18,10 +18,10 @@ public class EnemyGenerator : MonoBehaviour
         delta += Time.deltaTime; // 経過時間を計算
 
         // span秒毎に処理を行う
-        if(delta > span)
+        if (delta > span)
         {
             delta = 0;  // 時間計算用変数を０にする
-            span -= (span >= 0.5f)? 0.01f : 0f;  // スパンを少しずつ短くする
+            span -= (span >= 0.5f) ? 0.01f : 0f;  // スパンを少しずつ短くする
 
             // 敵のプレハブをヒエラルキーに登場させる
             GameObject go = Instantiate(EnemyPre);

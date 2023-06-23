@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3953605521756989712}
   - component: {fileID: 5384255778543555999}
   - component: {fileID: 2407822418307234443}
-  - component: {fileID: 8471839729742976783}
+  - component: {fileID: 3072010272726893203}
   m_Layer: 0
   m_Name: EnemyEye
   m_TagString: Enemy
@@ -143,7 +143,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.32
---- !u!114 &8471839729742976783
+--- !u!114 &3072010272726893203
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

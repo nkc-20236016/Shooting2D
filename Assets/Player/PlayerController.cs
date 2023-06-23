@@ -31,8 +31,8 @@ public class PlayerController : MonoBehaviour
     int shotLevel;  // 武器のレベル
     public int ShotLevel
     {
-        set 
-        { 
+        set
+        {
             shotLevel = value;
             shotLevel = Mathf.Clamp(shotLevel, 0, 12);
         }
@@ -42,10 +42,10 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         // アニメーターコンポーネント取得
-        anm = GetComponent<Animator>(); 
+        anm = GetComponent<Animator>();
         shotLevel = 0;  // 弾レベル
-        timer     = 0;  // 時間初期化
-        speed     = 10; // 初期スピード
+        timer = 0;  // 時間初期化
+        speed = 10; // 初期スピード
     }
 
     void Update()
@@ -90,8 +90,8 @@ public class PlayerController : MonoBehaviour
         transform.position = pos;
 
         // アニメーション設定
-        if (dir.y == 0)         anm.Play("neutral");
-        else if (dir.y == 1)    anm.Play("LMove");
-        else if (dir.y == -1)   anm.Play("RMove");       
+        if (dir.y == 0) anm.Play("neutral");
+        else if (dir.y == 1) anm.Play("LMove");
+        else if (dir.y == -1) anm.Play("RMove");
     }
 }

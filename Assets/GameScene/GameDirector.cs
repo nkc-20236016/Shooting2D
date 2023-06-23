@@ -18,13 +18,13 @@ public class GameDirector : MonoBehaviour
     public GameObject itemPre; // アイテムプレハブ保存
 
     // プレーヤーコントローラーコンポーネント保存
-    PlayerController playerCon; 
+    PlayerController playerCon;
 
     // 残り時間を他のスクリプトから変更するための宣言 public static
     public static float lastTime;
 
     // 距離計算用
-    public static int kyori;              
+    public static int kyori;
 
     // 距離の値を他のスクリプトから変更するためのプロパティ
     // (public staticを使わない方法)
@@ -52,7 +52,7 @@ public class GameDirector : MonoBehaviour
         kyoriLabel.text = kyori.ToString("D6") + "km";
 
         // 距離が600kmで割り切れるときにアイテム出現
-        if(kyori % 600 == 0)
+        if (kyori % 600 == 0)
         {
             Instantiate(itemPre);
         }
@@ -65,10 +65,9 @@ public class GameDirector : MonoBehaviour
         timeGauge.fillAmount = lastTime / 60f;
 
         // 制限時間が０より小さくなったらタイトルシーンへ
-        if(lastTime < 0)
+        if (lastTime < 0)
         {
             SceneManager.LoadScene("TitleScene");
         }
     }
 }
-
